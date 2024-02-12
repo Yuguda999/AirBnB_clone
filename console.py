@@ -52,7 +52,8 @@ class HBNBCommand(cmd.Cmd):
                 arg_str = arg_str[:-1]  # Remove trailing ')'
 
                 if method_name in self.supported_dot_commands:
-                    line = method_name + ' ' + cls_name + ' ' + arg_str.replace('\"', '').replace(',', '')
+                    line = method_name + ' ' + cls_name + ' ' +
+			arg_str.replace('\"', '').replace(',', '')
         except Exception:
             pass
         return line
@@ -98,7 +99,8 @@ class HBNBCommand(cmd.Cmd):
 
     def help_create(self):
         """Displays the help for the create command."""
-        print("Create a new instance of a class.\nUsage: create <class name>\n")
+        print("Create a new instance of a class.\nUsage:
+		create <class name>\n")
 
     def do_show(self, arg):
         """Shows an instance of a class by id."""
@@ -121,7 +123,8 @@ class HBNBCommand(cmd.Cmd):
 
     def help_show(self):
         """Displays the help for the show command."""
-        print("Show an instance of a class by id.\nUsage: show <class name> <id>\n")
+        print("Show an instance of a class by id.\nUsage:
+		show <class name> <id>\n")
 
     def do_destroy(self, arg):
         """Deletes an instance of a class by id."""
@@ -144,7 +147,8 @@ class HBNBCommand(cmd.Cmd):
 
     def help_destroy(self):
         """Displays the help for the destroy command."""
-        print("Deletes an instance of a class by id.\nUsage: destroy <class name> <id>\n")
+        print("Deletes an instance of a class by id.\nUsage:
+		destroy <class name> <id>\n")
 
     def do_all(self, arg):
         """Displays all instances of a class."""
@@ -171,7 +175,8 @@ class HBNBCommand(cmd.Cmd):
 
     def help_count(self):
         """Displays the help for the count command."""
-        print("Counts the number of instances of a class.\nUsage: count <class name>\n")
+        print("Counts the number of instances of a class.\nUsage:
+		count <class name>\n")
 
     def do_update(self, arg):
         """Updates an instance of a class by adding or updating attributes."""
@@ -201,7 +206,9 @@ class HBNBCommand(cmd.Cmd):
 
     def help_update(self):
         """Displays the help for the update command."""
-        print("Updates an instance of a class.\nUsage: update <class name> <id> <attribute name> \"<attribute value>\"\n")
+        print("Updates an instance of a class.\nUsage:
+		update <class name> <id> <attribute name> \"<attribute value>\"\n")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
