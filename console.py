@@ -52,8 +52,7 @@ class HBNBCommand(cmd.Cmd):
                 arg_str = arg_str[:-1]  # Remove trailing ')'
 
                 if method_name in self.supported_dot_commands:
-                    line = method_name + ' ' + cls_name + ' ' +
-			arg_str.replace('\"', '').replace(',', '')
+                    line = method_name + ' ' + cls_name + ' ' + arg_str.replace('\"', '').replace(',', '')
         except Exception:
             pass
         return line
@@ -99,8 +98,7 @@ class HBNBCommand(cmd.Cmd):
 
     def help_create(self):
         """Displays the help for the create command."""
-        print("Create a new instance of a class.\nUsage:
-		create <class name>\n")
+        print("Create a new instance of a class.\nUsage: create <class name>\n")
 
     def do_show(self, arg):
         """Shows an instance of a class by id."""
@@ -123,8 +121,7 @@ class HBNBCommand(cmd.Cmd):
 
     def help_show(self):
         """Displays the help for the show command."""
-        print("Show an instance of a class by id.\nUsage:
-		show <class name> <id>\n")
+        print("Show an instance of a class by id.\nUsage: show <class name> <id>\n")
 
     def do_destroy(self, arg):
         """Deletes an instance of a class by id."""
@@ -147,8 +144,7 @@ class HBNBCommand(cmd.Cmd):
 
     def help_destroy(self):
         """Displays the help for the destroy command."""
-        print("Deletes an instance of a class by id.\nUsage:
-		destroy <class name> <id>\n")
+        print("Deletes an instance of a class by id.\nUsage: destroy <class name> <id>\n")
 
     def do_all(self, arg):
         """Displays all instances of a class."""
